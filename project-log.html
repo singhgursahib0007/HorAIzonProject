@@ -12,80 +12,137 @@
     --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
   body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .page{max-width:840px;margin:0 auto;padding:56px 28px 80px}
+  .page{max-width:840px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,28px) 72px}
 
-  header{border-bottom:3px solid var(--teal);padding-bottom:26px;margin-bottom:38px}
-  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
-  h1{font-family:var(--serif);font-size:2.3rem;line-height:1.1;color:var(--teal);font-weight:700;letter-spacing:-.01em}
-  .sub{font-family:var(--serif);font-size:1.12rem;color:var(--ink);margin-top:8px}
-  .meta{margin-top:18px;font-size:.92rem;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 22px}
+  /* header */
+  header{border-bottom:3px solid var(--teal);padding-bottom:clamp(18px,4vw,26px);margin-bottom:clamp(22px,4vw,34px)}
+  .eyebrow{font-size:clamp(.62rem,2.6vw,.72rem);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+  h1{font-family:var(--serif);font-size:clamp(1.7rem,7vw,2.4rem);line-height:1.08;color:var(--teal);font-weight:700;letter-spacing:-.01em}
+  .sub{font-family:var(--serif);font-size:clamp(1rem,3.6vw,1.15rem);color:var(--ink);margin-top:6px}
+  .meta{margin-top:16px;font-size:clamp(.85rem,3.2vw,.92rem);color:var(--mute);display:flex;flex-direction:column;gap:4px}
   .meta b{color:var(--ink);font-weight:600}
-  .intro{font-size:.96rem;color:var(--mute);margin-bottom:36px}
+  .updated{margin-top:12px;font-size:clamp(.72rem,2.8vw,.8rem);color:var(--teal-dk);font-weight:600}
+  .intro{font-size:clamp(.9rem,3.4vw,.98rem);color:var(--mute);margin-bottom:clamp(22px,4vw,32px)}
 
-  .entry{position:relative;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;padding:28px 30px;margin-bottom:26px;box-shadow:0 1px 2px rgba(20,15,8,.03),0 8px 24px rgba(20,15,8,.04)}
-  .date{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);padding:.4em .8em;border-radius:100px;margin-bottom:14px}
-  .entry h2{font-family:var(--serif);font-size:1.45rem;color:var(--ink);font-weight:700;line-height:1.2;margin-bottom:10px}
-  .entry .lead{color:var(--mute);font-size:.98rem;margin-bottom:20px}
-  .block{margin-top:18px}
-  .block h3{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-dk);margin-bottom:10px}
-  .block ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .block li{position:relative;padding-left:1.4em;font-size:.95rem;color:var(--ink)}
+  /* accordion entries */
+  .entry{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;margin-bottom:14px;overflow:hidden;box-shadow:0 1px 2px rgba(20,15,8,.03),0 6px 18px rgba(20,15,8,.04)}
+  summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;
+          padding:clamp(16px,4vw,20px) clamp(16px,4vw,26px);user-select:none;-webkit-tap-highlight-color:transparent}
+  summary::-webkit-details-marker{display:none}
+  summary:focus-visible{outline:3px solid rgba(14,92,85,.35);outline-offset:-3px;border-radius:8px}
+  .head-text{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;min-width:0}
+  .date{flex:none;font-size:clamp(.66rem,2.7vw,.74rem);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+        color:var(--teal);background:var(--teal-lt);padding:.42em .8em;border-radius:100px;white-space:nowrap}
+  .entry-title{font-family:var(--serif);font-size:clamp(1.02rem,3.8vw,1.28rem);font-weight:700;color:var(--ink);line-height:1.25}
+  .chev{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:var(--teal);transition:transform .25s ease}
+  .chev::before{content:"";width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+  details[open] .chev{transform:rotate(180deg)}
+  summary:hover .entry-title{color:var(--teal-dk)}
+
+  .panel{padding:0 clamp(16px,4vw,26px) clamp(18px,4vw,24px)}
+  .panel .lead{color:var(--mute);font-size:clamp(.9rem,3.4vw,.98rem);margin:0 0 16px}
+  .block{margin-top:16px}
+  .block h3{font-size:clamp(.7rem,2.9vw,.78rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-dk);margin-bottom:9px}
+  .block ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .block li{position:relative;padding-left:1.4em;font-size:clamp(.9rem,3.4vw,.95rem);color:var(--ink)}
   .block li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--teal)}
-  .status{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.92rem;color:var(--mute)}
-  .status b{color:var(--teal-dk)}
+  .status{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:clamp(.88rem,3.3vw,.92rem);color:var(--mute)}
+  .status strong{color:var(--teal-dk)}
 
-  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:.82rem;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .notice{background:var(--teal-lt);border:1px solid var(--line);border-radius:12px;padding:20px 22px;color:var(--teal-dk);font-size:.95rem}
+
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:clamp(.72rem,2.8vw,.82rem);color:var(--mute);
+         display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  @media (max-width:430px){
+    .head-text{gap:8px}
+    .entry-title{flex-basis:100%}
+  }
+  @media (prefers-reduced-motion:reduce){ .chev{transition:none} }
 </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <div class="eyebrow">Thompson Rivers University &middot; HorAIzon Initiative</div>
-      <h1>Living Heritage</h1>
-      <div class="sub">Project Progress Log</div>
-      <div class="meta">
-        <span><b>Prepared by</b> Gursahib Singh, Research Assistant</span>
-        <span><b>For</b> Dr. Latif, Thompson Rivers University</span>
-      </div>
+      <div class="eyebrow" id="initiative"></div>
+      <h1 id="title"></h1>
+      <div class="sub" id="subtitle"></div>
+      <div class="meta" id="meta"></div>
+      <div class="updated" id="updated"></div>
     </header>
-
-    <p class="intro">Official progress record for the Living Heritage platform, a community-governed Secwépemc language and culture preservation platform. This log is updated incrementally, with each entry summarizing one working session.</p>
-
-    <article class="entry">
-      <span class="date">19 June 2026</span>
-      <h2>Specification refinement and language-resource repository</h2>
-      <p class="lead">Incorporated Dr. Latif's feedback into the project specification, and established a structured repository of publicly available Secwepemctsín language resources.</p>
-
-      <div class="block">
-        <h3>Project specification updated</h3>
-        <ul>
-          <li>Adopted a working platform name, "Living Heritage," kept distinct from the HorAIzon initiative.</li>
-          <li>Added a dedicated subsection explaining how the platform satisfies the OCAP principles (Ownership, Control, Access, and Possession).</li>
-          <li>Added Indigenous music as a preserved feature of the platform, with a note on eventually helping learners learn their own music traditions.</li>
-          <li>Reframed the use of artificial intelligence to emphasize open-source models that run privately on secure, community-controlled infrastructure.</li>
-          <li>Streamlined the document and removed vendor-specific references.</li>
-        </ul>
-      </div>
-
-      <div class="block">
-        <h3>Public language-resource repository established</h3>
-        <ul>
-          <li>Created a clearly organized repository of publicly available resources for Secwepemctsín, the Secwépemc (Shuswap) language of the Kamloops region.</li>
-          <li>Structured into Text, Images, Music, Videos, and Additional Learning Resources.</li>
-          <li>Collected language overviews, alphabet and orthography references, word and phrase lists, dictionary and grammar pointers, stories, and academic and government sources, each with attribution.</li>
-          <li>Gathered openly licensed images with descriptive metadata, a referenced catalog of music recordings that respects community ownership, a curated list of educational videos, and a directory of courses, apps, organizations, and archives.</li>
-          <li>Preserved source links and licensing throughout, following Indigenous data sovereignty principles (OCAP and CARE).</li>
-        </ul>
-      </div>
-
-      <p class="status"><b>Status:</b> On track. Next work focuses on beginning the platform's foundational build.</p>
-    </article>
-
-    <footer>
-      <span>Living Heritage Project Progress Log</span>
-      <span>Thompson Rivers University &middot; HorAIzon Initiative</span>
-    </footer>
+    <p class="intro" id="intro"></p>
+    <div id="log"></div>
+    <footer id="footer"></footer>
   </div>
+
+  <script>
+    function el(tag, cls, text){ const n=document.createElement(tag); if(cls)n.className=cls; if(text!=null)n.textContent=text; return n; }
+
+    function renderHeader(d){
+      document.getElementById('initiative').textContent = d.initiative || '';
+      document.getElementById('title').textContent = d.project || 'Project Progress Log';
+      document.getElementById('subtitle').textContent = d.subtitle || '';
+      const meta = document.getElementById('meta');
+      if(d.preparedBy){ const s=el('span'); s.append(el('b',null,'Prepared by '), document.createTextNode(d.preparedBy)); meta.appendChild(s); }
+      if(d.preparedFor){ const s=el('span'); s.append(el('b',null,'For '), document.createTextNode(d.preparedFor)); meta.appendChild(s); }
+      document.getElementById('intro').textContent = d.intro || '';
+      const foot = document.getElementById('footer');
+      foot.appendChild(el('span', null, (d.project||'') + ' ' + (d.subtitle||'')));
+      foot.appendChild(el('span', null, d.initiative || ''));
+    }
+
+    function createEntry(entry, open){
+      const det = el('details','entry'); if(open) det.open = true;
+      const sum = el('summary');
+      const head = el('span','head-text');
+      head.appendChild(el('span','date', entry.dateLabel || entry.date || ''));
+      head.appendChild(el('span','entry-title', entry.title || ''));
+      sum.appendChild(head);
+      sum.appendChild(el('span','chev'));
+      det.appendChild(sum);
+
+      const panel = el('div','panel');
+      if(entry.summary) panel.appendChild(el('p','lead', entry.summary));
+      (entry.sections || []).forEach(sec => {
+        const blk = el('div','block');
+        if(sec.heading) blk.appendChild(el('h3', null, sec.heading));
+        const ul = el('ul');
+        (sec.items || []).forEach(it => ul.appendChild(el('li', null, it)));
+        blk.appendChild(ul);
+        panel.appendChild(blk);
+      });
+      if(entry.status){
+        const st = el('p','status');
+        st.appendChild(el('strong', null, 'Status: '));
+        st.appendChild(document.createTextNode(entry.status));
+        panel.appendChild(st);
+      }
+      det.appendChild(panel);
+      return det;
+    }
+
+    async function load(){
+      const log = document.getElementById('log');
+      let data;
+      try{
+        const res = await fetch('progress-log.json', {cache:'no-store'});
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        data = await res.json();
+      }catch(err){
+        log.appendChild(el('div','notice','Unable to load the progress data (progress-log.json). If you are viewing this page from a saved local file, please open it through the hosted project link instead, where the data file is served alongside it.'));
+        return;
+      }
+      renderHeader(data);
+      const entries = (data.entries || []).slice().sort((a,b) => (b.date||'').localeCompare(a.date||''));
+      if(entries.length){
+        document.getElementById('updated').textContent = 'Last updated: ' + (entries[0].dateLabel || entries[0].date);
+      }
+      entries.forEach((entry, i) => log.appendChild(createEntry(entry, i === 0)));
+    }
+
+    load();
+  </script>
 </body>
 </html>
