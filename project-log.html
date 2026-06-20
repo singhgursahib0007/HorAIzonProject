@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Living Heritage Project Progress Log</title>
+<style>
+  :root{
+    --teal:#0E5C55; --teal-dk:#0A403B; --teal-lt:#E9F2F0;
+    --paper:#FBFAF6; --card:#FFFFFF; --ink:#23201C; --mute:#6A645B; --line:#E3DDD2;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .page{max-width:840px;margin:0 auto;padding:56px 28px 80px}
+
+  header{border-bottom:3px solid var(--teal);padding-bottom:26px;margin-bottom:38px}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+  h1{font-family:var(--serif);font-size:2.3rem;line-height:1.1;color:var(--teal);font-weight:700;letter-spacing:-.01em}
+  .sub{font-family:var(--serif);font-size:1.12rem;color:var(--ink);margin-top:8px}
+  .meta{margin-top:18px;font-size:.92rem;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 22px}
+  .meta b{color:var(--ink);font-weight:600}
+  .intro{font-size:.96rem;color:var(--mute);margin-bottom:36px}
+
+  .entry{position:relative;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;padding:28px 30px;margin-bottom:26px;box-shadow:0 1px 2px rgba(20,15,8,.03),0 8px 24px rgba(20,15,8,.04)}
+  .date{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);padding:.4em .8em;border-radius:100px;margin-bottom:14px}
+  .entry h2{font-family:var(--serif);font-size:1.45rem;color:var(--ink);font-weight:700;line-height:1.2;margin-bottom:10px}
+  .entry .lead{color:var(--mute);font-size:.98rem;margin-bottom:20px}
+  .block{margin-top:18px}
+  .block h3{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-dk);margin-bottom:10px}
+  .block ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .block li{position:relative;padding-left:1.4em;font-size:.95rem;color:var(--ink)}
+  .block li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+  .status{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.92rem;color:var(--mute)}
+  .status b{color:var(--teal-dk)}
+
+  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:.82rem;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="eyebrow">Thompson Rivers University &middot; HorAIzon Initiative</div>
+      <h1>Living Heritage</h1>
+      <div class="sub">Project Progress Log</div>
+      <div class="meta">
+        <span><b>Prepared by</b> Gursahib Singh, Research Assistant</span>
+        <span><b>For</b> Dr. Latif, Thompson Rivers University</span>
+      </div>
+    </header>
+
+    <p class="intro">Official progress record for the Living Heritage platform, a community-governed Secwépemc language and culture preservation platform. This log is updated incrementally, with each entry summarizing one working session.</p>
+
+    <article class="entry">
+      <span class="date">19 June 2026</span>
+      <h2>Specification refinement and language-resource repository</h2>
+      <p class="lead">Incorporated Dr. Latif's feedback into the project specification, and established a structured repository of publicly available Secwepemctsín language resources.</p>
+
+      <div class="block">
+        <h3>Project specification updated</h3>
+        <ul>
+          <li>Adopted a working platform name, "Living Heritage," kept distinct from the HorAIzon initiative.</li>
+          <li>Added a dedicated subsection explaining how the platform satisfies the OCAP principles (Ownership, Control, Access, and Possession).</li>
+          <li>Added Indigenous music as a preserved feature of the platform, with a note on eventually helping learners learn their own music traditions.</li>
+          <li>Reframed the use of artificial intelligence to emphasize open-source models that run privately on secure, community-controlled infrastructure.</li>
+          <li>Streamlined the document and removed vendor-specific references.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Public language-resource repository established</h3>
+        <ul>
+          <li>Created a clearly organized repository of publicly available resources for Secwepemctsín, the Secwépemc (Shuswap) language of the Kamloops region.</li>
+          <li>Structured into Text, Images, Music, Videos, and Additional Learning Resources.</li>
+          <li>Collected language overviews, alphabet and orthography references, word and phrase lists, dictionary and grammar pointers, stories, and academic and government sources, each with attribution.</li>
+          <li>Gathered openly licensed images with descriptive metadata, a referenced catalog of music recordings that respects community ownership, a curated list of educational videos, and a directory of courses, apps, organizations, and archives.</li>
+          <li>Preserved source links and licensing throughout, following Indigenous data sovereignty principles (OCAP and CARE).</li>
+        </ul>
+      </div>
+
+      <p class="status"><b>Status:</b> On track. Next work focuses on beginning the platform's foundational build.</p>
+    </article>
+
+    <footer>
+      <span>Living Heritage Project Progress Log</span>
+      <span>Thompson Rivers University &middot; HorAIzon Initiative</span>
+    </footer>
+  </div>
+</body>
+</html>
