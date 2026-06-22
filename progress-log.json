@@ -7,6 +7,30 @@
   "intro": "Official progress record for the Living Heritage platform, a community-governed Secwépemc language and culture preservation platform. This log is updated incrementally. Tap any date to expand that day's report.",
   "entries": [
     {
+      "date": "2026-06-22",
+      "dateLabel": "22 June 2026",
+      "title": "Started building the platform (foundations and design)",
+      "summary": "This was the first proper build day, and a lot came together. I got the platform set up from the ground up and put a full visual design in place, so we now have a real working foundation rather than just planning documents.",
+      "sections": [
+        {
+          "heading": "Getting everything set up",
+          "items": [
+            "Set up the actual web application that the whole platform will be built on, and organized the project carefully so it stays easy and tidy to keep adding to.",
+            "Put a clean and reliable development setup in place so the quality stays high as the project grows."
+          ]
+        },
+        {
+          "heading": "The look and feel of the platform",
+          "items": [
+            "Designed the full visual style of the platform from end to end, aiming for something warm and respectful rather than cold and overly technical.",
+            "Chose colours inspired by the Secwépemc land, and picked fonts that display the Secwepemctsín writing correctly, including its special characters, so the language always looks right.",
+            "Built all the main pieces of the interface, such as buttons, cards, menus, and the overall page layout, and made sure everything works in both light and dark mode and stays accessible."
+          ]
+        }
+      ],
+      "status": "On track and happy with the pace. Next I will move on to the data side of the platform and the part that protects community ownership and controls who can see what."
+    },
+    {
       "date": "2026-06-19",
       "dateLabel": "19 June 2026",
       "title": "Specification refinement and language-resource repository",
