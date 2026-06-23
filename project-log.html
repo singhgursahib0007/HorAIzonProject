@@ -53,6 +53,10 @@
 
   .notice{background:var(--teal-lt);border:1px solid var(--line);border-radius:12px;padding:20px 22px;color:var(--teal-dk);font-size:.95rem}
 
+  .proof{margin-top:18px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0e0e10}
+  .proof img{display:block;width:100%;height:auto}
+  .proof figcaption{padding:10px 14px;font-size:clamp(.78rem,3vw,.85rem);color:var(--mute);border-top:1px solid var(--line);background:var(--card)}
+
   footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:clamp(.72rem,2.8vw,.82rem);color:var(--mute);
          display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
@@ -113,6 +117,16 @@
         blk.appendChild(ul);
         panel.appendChild(blk);
       });
+      if(entry.image){
+        const fig = el('figure','proof');
+        const img = el('img');
+        img.src = entry.image;
+        img.alt = entry.imageAlt || (entry.title || 'Progress screenshot');
+        img.loading = 'lazy';
+        fig.appendChild(img);
+        if(entry.imageCaption) fig.appendChild(el('figcaption', null, entry.imageCaption));
+        panel.appendChild(fig);
+      }
       if(entry.status){
         const st = el('p','status');
         st.appendChild(el('strong', null, 'Status: '));

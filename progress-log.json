@@ -7,6 +7,33 @@
   "intro": "Official progress record for the Living Heritage platform, a community-governed Secwépemc language and culture preservation platform. This log is updated incrementally. Tap any date to expand that day's report.",
   "entries": [
     {
+      "date": "2026-06-23",
+      "dateLabel": "23 June 2026",
+      "title": "Data foundation and community-ownership controls (part one)",
+      "summary": "A big setup day. I built the foundation that will hold all of the cultural content, and I started on the most important part of the whole project, which is the set of controls that keep the community in charge of their own knowledge. I got a good chunk of this done today and will finish the rest tomorrow.",
+      "sections": [
+        {
+          "heading": "The data foundation",
+          "items": [
+            "Set up the underlying structure that will hold every kind of cultural content, including recordings, images, and stories, and made sure each community's material is kept clearly separate and its own.",
+            "Did a lot of careful groundwork here so the rest of the platform has a solid, organized base to build on."
+          ]
+        },
+        {
+          "heading": "Community ownership and privacy (started today)",
+          "items": [
+            "Began building the system that keeps everything private by default, so nothing is ever shown publicly until it has been reviewed and approved.",
+            "Started setting up the different levels of access (open to everyone, community only, restricted, and sacred) so that sensitive material is properly protected.",
+            "Laid the groundwork for consent to be something that can always be given and withdrawn, in keeping with the OCAP principles we discussed."
+          ]
+        }
+      ],
+      "image": "images/2026-06-23-platform.jpg",
+      "imageAlt": "The Living Heritage platform showing its early content library, with each item marked by its access level.",
+      "imageCaption": "An early look at the running platform: the content library, where each item carries its access level, and where restricted and community-only material stays hidden from anyone without permission.",
+      "status": "Partly complete. The data foundation is in place and the community-ownership controls are set up and working in part. I will finish the remaining access and consent rules tomorrow, and then move on to accounts and roles."
+    },
+    {
       "date": "2026-06-22",
       "dateLabel": "22 June 2026",
       "title": "Started building the platform (foundations and design)",

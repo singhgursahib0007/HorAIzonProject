@@ -9,6 +9,25 @@ This log is updated incrementally. Each entry summarizes one working session.
 
 ---
 
+## 23 June 2026: Data foundation and community-ownership controls (part one)
+
+A big setup day. I built the foundation that will hold all of the cultural content, and I started on the most important part of the whole project, which is the set of controls that keep the community in charge of their own knowledge. I got a good chunk of this done today and will finish the rest tomorrow.
+
+### The data foundation
+- Set up the underlying structure that will hold every kind of cultural content, including recordings, images, and stories, and made sure each community's material is kept clearly separate and its own.
+- Did a lot of careful groundwork here so the rest of the platform has a solid, organized base to build on.
+
+### Community ownership and privacy (started today)
+- Began building the system that keeps everything private by default, so nothing is ever shown publicly until it has been reviewed and approved.
+- Started setting up the different levels of access (open to everyone, community only, restricted, and sacred) so that sensitive material is properly protected.
+- Laid the groundwork for consent to be something that can always be given and withdrawn, in keeping with the OCAP principles we discussed.
+
+I have attached a screenshot of the platform as it stands so far. It shows the early content library, where each item carries its access level, and where restricted and community-only material stays hidden from anyone without permission.
+
+**Status:** Partly complete. The data foundation is in place and the community-ownership controls are set up and working in part. I will finish the remaining access and consent rules tomorrow, and then move on to accounts and roles.
+
+---
+
 ## 22 June 2026: Started building the platform (foundations and design)
 
 This was the first proper build day, and a lot came together. I got the platform set up from the ground up and put a full visual design in place, so we now have a real working foundation rather than just planning documents.
