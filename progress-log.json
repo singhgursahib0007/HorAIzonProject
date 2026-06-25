@@ -7,6 +7,41 @@
   "intro": "Official progress record for the Living Heritage platform, a community-governed Secwépemc language and culture preservation platform. This log is updated incrementally. Tap any date to expand that day's report.",
   "entries": [
     {
+      "date": "2026-06-24",
+      "dateLabel": "24 June 2026",
+      "title": "Finished the community-ownership controls (part two)",
+      "summary": "Picked up where I left off yesterday and finished the community-ownership controls. The privacy and access system is now fully in place and working, which I am really happy with because it is the heart of the whole project.",
+      "sections": [
+        {
+          "heading": "Finishing the access levels",
+          "items": [
+            "Completed the four levels of access (open to everyone, community only, restricted, and sacred) so every piece of content is protected at the right level.",
+            "Made sure the rules are enforced everywhere, so restricted or sacred material can never slip through, even by accident."
+          ]
+        },
+        {
+          "heading": "Consent and checking it all works",
+          "items": [
+            "Finished the consent system so a contributor's permission can be recorded and withdrawn at any time, and withdrawing it removes the material.",
+            "Spent time carefully testing the whole thing to confirm that private content truly stays private and that only the right people can see each item."
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "images/2026-06-24-library.jpg",
+          "alt": "The platform content library, with each item marked by its access level.",
+          "caption": "The content library. Each item carries its access level, and restricted or community-only material stays hidden from anyone without permission."
+        },
+        {
+          "src": "images/2026-06-24-item.jpg",
+          "alt": "A single item showing its access level and its provenance and attribution record.",
+          "caption": "A single item, showing its access level along with the record of where it came from and who it belongs to."
+        }
+      ],
+      "status": "Complete and tested. The data and privacy foundation is done. Next I will build sign-in and the different roles people can have."
+    },
+    {
       "date": "2026-06-23",
       "dateLabel": "23 June 2026",
       "title": "Data foundation and community-ownership controls (part one)",

@@ -117,16 +117,21 @@
         blk.appendChild(ul);
         panel.appendChild(blk);
       });
-      if(entry.image){
+      // Support a single image (entry.image/imageAlt/imageCaption) or many (entry.images[]).
+      let shots = [];
+      if(Array.isArray(entry.images)) shots = entry.images;
+      else if(entry.image) shots = [{src:entry.image, alt:entry.imageAlt, caption:entry.imageCaption}];
+      shots.forEach(shot => {
+        if(!shot || !shot.src) return;
         const fig = el('figure','proof');
         const img = el('img');
-        img.src = entry.image;
-        img.alt = entry.imageAlt || (entry.title || 'Progress screenshot');
+        img.src = shot.src;
+        img.alt = shot.alt || (entry.title || 'Progress screenshot');
         img.loading = 'lazy';
         fig.appendChild(img);
-        if(entry.imageCaption) fig.appendChild(el('figcaption', null, entry.imageCaption));
+        if(shot.caption) fig.appendChild(el('figcaption', null, shot.caption));
         panel.appendChild(fig);
-      }
+      });
       if(entry.status){
         const st = el('p','status');
         st.appendChild(el('strong', null, 'Status: '));

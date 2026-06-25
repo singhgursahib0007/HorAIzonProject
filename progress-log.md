@@ -9,6 +9,24 @@ This log is updated incrementally. Each entry summarizes one working session.
 
 ---
 
+## 24 June 2026: Finished the community-ownership controls (part two)
+
+Picked up where I left off yesterday and finished the community-ownership controls. The privacy and access system is now fully in place and working, which I am really happy with because it is the heart of the whole project.
+
+### Finishing the access levels
+- Completed the four levels of access (open to everyone, community only, restricted, and sacred) so every piece of content is protected at the right level.
+- Made sure the rules are enforced everywhere, so restricted or sacred material can never slip through, even by accident.
+
+### Consent and checking it all works
+- Finished the consent system so a contributor's permission can be recorded and withdrawn at any time, and withdrawing it removes the material.
+- Spent time carefully testing the whole thing to confirm that private content truly stays private and that only the right people can see each item.
+
+I have attached two screenshots to the report. The first shows the content library, where each item carries its access level and restricted or community-only material stays hidden. The second shows a single item with its access level and the record of where it came from and who it belongs to.
+
+**Status:** Complete and tested. The data and privacy foundation is done. Next I will build sign-in and the different roles people can have.
+
+---
+
 ## 23 June 2026: Data foundation and community-ownership controls (part one)
 
 A big setup day. I built the foundation that will hold all of the cultural content, and I started on the most important part of the whole project, which is the set of controls that keep the community in charge of their own knowledge. I got a good chunk of this done today and will finish the rest tomorrow.
