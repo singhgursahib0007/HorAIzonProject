@@ -9,6 +9,25 @@ This log is updated incrementally. Each entry summarizes one working session.
 
 ---
 
+## 25 June 2026: Accounts and roles, and the review and approval process
+
+Two solid pieces today. I built the way people sign in and the different roles they can have, and then I built the review and approval process that decides what actually gets shared. Together these make sure the right people stay in control of the content.
+
+### Accounts, sign-in, and roles
+- Set up secure accounts so each person has their own private login, with a friendly first-time setup when someone new joins.
+- Created the different roles people can have (learner, community member, knowledge keeper, reviewer, and steward), so each person only sees and can do what is appropriate for them.
+
+### Review and approval
+- Built the process where contributions start out private and must be reviewed and approved before they are shared with anyone.
+- Gave reviewers a clear queue to approve content, ask for changes, or decline it, with a record kept of every decision.
+- Tied this to the consent system, so if someone withdraws their permission, the related material is taken down.
+
+I have also put the work so far into the GitHub repository you set up, so you can look through the code there whenever it is convenient.
+
+**Status:** On track. The platform now has its accounts-and-permissions layer and its approval process in place. Next I will start on how the actual content, such as recordings and images, is stored and played.
+
+---
+
 ## 24 June 2026: Finished the community-ownership controls (part two)
 
 Picked up where I left off yesterday and finished the community-ownership controls. The privacy and access system is now fully in place and working, which I am really happy with because it is the heart of the whole project.
